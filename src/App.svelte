@@ -1,24 +1,23 @@
-<!-- <script>
+<script>
   import { onMount } from 'svelte';
 
+  import Header from './components/Header.svelte';
+  import Footer from './components/Footer.svelte';
+
   import { getUserInfo } from './github';
-  export let name;
-  export let avatar;
+  let name = '';
+  let avatar;
 
   onMount(async () => {
     const { name: userName, avatar_url } = await getUserInfo('elkirkmo');
     name = userName;
     avatar = avatar_url;
   });
-</script> -->
-
-<!-- <main>
-  <h1>Hello {name}!</h1>
-  <img class="avatar" src={avatar} alt={`picture of ${name}`} />
-</main> -->
+</script>
 
 <main>
-  <h1>Hey</h1>
+  <Header {name} {avatar} />
+  <Footer {name} />
 </main>
 
 <style>
@@ -28,23 +27,6 @@
     max-width: 240px;
     margin: 0 auto;
   }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
-  }
-
-  .avatar {
-    width: 100px;
-    height: 100px;
-    display: block;
-    border-radius: 100px;
-    overflow: hidden;
-    border: 4px solid red;
-  }
-
   @media (min-width: 640px) {
     main {
       max-width: none;
