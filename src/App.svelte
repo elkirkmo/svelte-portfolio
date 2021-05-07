@@ -21,6 +21,9 @@
 </main>
 
 <style>
+  :root {
+    --theme-default: blue;
+  }
   main {
     text-align: center;
     padding: 1em;

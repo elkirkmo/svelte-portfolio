@@ -4,11 +4,15 @@
 </script>
 
 <header>
-  <h1>Hello {name}!</h1>
+  <h1>Hello. I'm {name}!</h1>
   <img class="avatar" src={avatar} alt={`picture of ${name}`} />
 </header>
 
 <style>
+  header {
+    display: flex;
+    flex-direction: row;
+  }
   h1 {
     color: #ff3e00;
     text-transform: uppercase;
